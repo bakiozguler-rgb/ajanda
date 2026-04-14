@@ -1,0 +1,9 @@
+{
+	"appId": "com.bakio.zennotes.mobile",
+	"appName": "ZenNotes Mobile",
+	"webDir": "dist",
+	"server": {
+		"androidScheme": "http",
+		"cleartext": true
+	}
+}

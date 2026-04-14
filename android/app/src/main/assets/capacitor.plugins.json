@@ -1,0 +1,18 @@
+[
+	{
+		"pkg": "@capacitor-community/speech-recognition",
+		"classpath": "com.getcapacitor.community.speechrecognition.SpeechRecognition"
+	},
+	{
+		"pkg": "@capacitor-mlkit/barcode-scanning",
+		"classpath": "io.capawesome.capacitorjs.plugins.mlkit.barcodescanning.BarcodeScannerPlugin"
+	},
+	{
+		"pkg": "@capacitor-mlkit/document-scanner",
+		"classpath": "io.capawesome.capacitorjs.plugins.mlkit.documentscanner.DocumentScannerPlugin"
+	},
+	{
+		"pkg": "@capacitor/app",
+		"classpath": "com.capacitorjs.plugins.app.AppPlugin"
+	}
+]

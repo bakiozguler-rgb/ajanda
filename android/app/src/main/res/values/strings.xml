@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ZenNotes Mobile</string>
+    <string name="title_activity_main">ZenNotes Mobile</string>
+    <string name="package_name">com.bakio.zennotes.mobile</string>
+    <string name="custom_url_scheme">com.bakio.zennotes.mobile</string>
+</resources>
