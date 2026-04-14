@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "DM Serif Display", serif;
+  
+  --color-bg-main: #F8F9FA;
+  --color-sidebar-bg: #FFFFFF;
+  --color-text-dark: #1A1A1B;
+  --color-text-muted: #6C757D;
+  --color-accent: #000000;
+  --color-card-bg: #FFFFFF;
+  --color-border: #E9ECEF;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-main text-text-dark font-sans;
+  }
+}
+
+body.barcode-scanner-active {
+  background: transparent !important;
+  visibility: hidden;
+}
+
+body.barcode-scanner-active #root {
+  background: transparent !important;
+}
+
+body.barcode-scanner-active .barcode-scanner-modal,
+body.barcode-scanner-active .barcode-scanner-modal * {
+  visibility: visible;
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 0 0 rgba(0,0,0,0.05); }
+  70% { box-shadow: 0 0 0 10px rgba(0,0,0,0); }
+  100% { box-shadow: 0 0 0 0 rgba(0,0,0,0); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+.ProseMirror {
+  min-height: 24rem;
+  outline: none;
+  white-space: pre-wrap;
+  caret-color: #1a1a1b;
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+input,
+textarea,
+[contenteditable="true"] {
+  caret-color: #1a1a1b;
+}
+
+.ProseMirror p.is-editor-empty:first-child::before {
+  color: #adb5bd;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.ProseMirror h1 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  line-height: 1.15;
+  margin: 1.25rem 0 0.75rem;
+}
+
+.ProseMirror h2 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin: 1rem 0 0.5rem;
+}
+
+.ProseMirror ul,
+.ProseMirror ol {
+  padding-left: 1.5rem;
+}
+
+.ProseMirror ul {
+  list-style: disc;
+}
+
+.ProseMirror ol {
+  list-style: decimal;
+}
+
+.ProseMirror a {
+  color: #0f172a;
+  text-decoration: underline;
+}
+
+.ProseMirror table {
+  border-collapse: collapse;
+  margin: 1rem 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.ProseMirror td,
+.ProseMirror th {
+  border: 1px solid #e9ecef;
+  min-width: 6rem;
+  padding: 0.75rem;
+  vertical-align: top;
+}
+
+.ProseMirror th {
+  background: #f8f9fa;
+  font-weight: 600;
+}
+
+.ProseMirror-focused {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.06);
+}
